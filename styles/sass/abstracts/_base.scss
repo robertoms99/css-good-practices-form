@@ -9,9 +9,6 @@
 /*1-base for rem multiplicator*/
 html {
   font-size: 62.5%; //1
-  @include responsiveness(768px) {
-    font-size: 50%; //1
-  }
 }
 /*1-alternative box model*/
 /*2- create a BFC*/
