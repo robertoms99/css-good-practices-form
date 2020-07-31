@@ -35,9 +35,11 @@
   @for $i from 1 to 11 {
     .col-#{$i} {
       width: $i * 10%; //3
-      @include responsiveness(600px) {
-        width: 100%;
-      }
+    }
+  }
+  [class|='col'] {
+    @include responsiveness(600px) {
+      width: 100%;
     }
   }
 }

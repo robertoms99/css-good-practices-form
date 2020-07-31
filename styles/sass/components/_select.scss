@@ -8,12 +8,17 @@
   width: 100%;
   position: relative;
   &::after {
-    content: '\21D3'; //1
+    $arrow-dimension: 0.5em;
+    content: ''; //1
     display: inline-block;
     position: absolute;
-    top: calc(50% - 0.5em); //2
+    top: calc(50% - (#{$arrow-dimension} / 2)); //2
     right: 1em;
-    color: $color-accent;
+    height: $arrow-dimension;
+    width: $arrow-dimension;
+    border: 2px solid;
+    border-color: transparent $color-accent $color-accent transparent;
+    transform: rotate(45deg);
     pointer-events: none; //3
   }
   &__input {
