@@ -1,0 +1,17 @@
+/*|| TYPOGRAPHY ||*/
+.heading {
+  text-transform: uppercase;
+}
+.text {
+  display: inline-block;
+  font-size: 1.3rem;
+  &::first-letter {
+    text-transform: uppercase;
+  }
+  &-center {
+    text-align: center;
+  }
+  &--accent {
+    color: $color-accent;
+  }
+}

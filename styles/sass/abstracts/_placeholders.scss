@@ -1,0 +1,18 @@
+/*||PLACEHOLDER SELECTOR||*/
+//1- remove border and outline
+//2- height in relation to the default line-height and paddings
+//3- override user agent appearance
+%input-resets {
+  outline: none; //1
+  border: none; //1
+  border-radius: 3px;
+  padding: $padding-input ($padding-input * 2);
+  height: calc(1.3em + (#{$padding-input} * 2)); //2
+  width: 100%;
+  display: block;
+}
+%remove-appearance {
+  appearance: none; //3
+  -webkit-appearance: none; //3
+  -moz-appearance: none; //3
+}

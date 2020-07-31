@@ -1,0 +1,8 @@
+$color-black: rgb(74, 85, 104); // default text color
+$color-grey: rgb(237, 242, 247);
+$color-grey-light: lighten($color-grey, 3%);
+$color-grey-dark: darken($color-grey, 7%);
+$font-size-default: (((14 / 10) * 100) * 1%); //font-size in percentage
+$padding-input: 0.5em; // input spacing
+$color-accent: rgb(192, 0, 58); //color tertiary
+$gutter: 1rem; //default gutter (vertical rhythm)

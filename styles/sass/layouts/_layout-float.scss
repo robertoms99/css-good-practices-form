@@ -1,0 +1,46 @@
+/*||FLOAT LAYOUT GRID||*/
+//1- override gutter base
+//2- clearance
+//3- create a BFC
+//4- create twelve columns
+.row {
+  $gutter: $gutter * 3; //1
+  &::after {
+    content: ''; //2
+    display: block; //2
+    clear: both; //2
+  }
+  &:not(:last-child) {
+    margin-bottom: $gutter;
+    @include responsiveness(600px) {
+      $gutter: ($gutter / 3) * 2;
+      margin-bottom: $gutter;
+    }
+  }
+  &--gutter {
+    [class|='col']:not(:last-child) {
+      padding-right: $gutter;
+      @include responsiveness(600px) {
+        $gutter: ($gutter / 3) * 2;
+        padding-right: 0;
+        padding-bottom: $gutter;
+      }
+    }
+  }
+  [class|='col'] {
+    float: left;
+    @include responsiveness(600px) {
+      float: none;
+    }
+  }
+  .col-auto {
+    display: flow-root; //3
+    float: none;
+  }
+  $col-unit: 100% / 12;
+  @for $i from 1 to 13 {
+    .col-#{$i} {
+      width: $i * $col-unit; //4
+    }
+  }
+}

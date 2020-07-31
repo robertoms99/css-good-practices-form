@@ -1,0 +1,6 @@
+/*|| INPUT COMPONENT||*/
+
+//1-  inherited style
+.input {
+  @extend %input-resets; //1
+}

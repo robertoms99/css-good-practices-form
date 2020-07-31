@@ -1,0 +1,27 @@
+/*||GLOBALS RESETS||*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+/*1-base for rem multiplicator*/
+html {
+  font-size: 62.5%; //1
+  @include responsiveness(768px) {
+    font-size: 50%; //1
+  }
+}
+/*1-alternative box model*/
+/*2- create a BFC*/
+body {
+  color: $color-black;
+  font: #{$font-size-default} sans-serif;
+  box-sizing: border-box; //1
+  display: flow-root; //2
+  background-color: $color-grey-light;
+}
+p {
+  line-height: 1.5;
+}

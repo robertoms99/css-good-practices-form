@@ -1,0 +1,13 @@
+.button {
+  @extend %input-resets;
+  cursor: pointer;
+  &--inline {
+    display: inline-block;
+    width: auto;
+    padding: $padding-input ($padding-input * 5);
+  }
+  &--alternative {
+    background-color: $color-accent;
+    color: white;
+  }
+}

@@ -1,0 +1,43 @@
+/*||FLEX LAYOUT GRID||*/
+
+//1- override gutter base
+//2- grow remaining space
+//3- create ten columns
+.flex-row {
+  $gutter: $gutter * 3; //1
+  display: flex;
+  @include responsiveness(600px) {
+    flex-direction: column;
+  }
+  &:not(:last-child) {
+    margin-bottom: $gutter;
+    @include responsiveness(600px) {
+      $gutter: ($gutter / 3) * 2;
+      margin-bottom: $gutter;
+    }
+  }
+  &--gutter {
+    [class|='col']:not(:last-child) {
+      margin-right: $gutter;
+      @include responsiveness(600px) {
+        $gutter: ($gutter / 3) * 2;
+        margin-right: 0;
+        margin-bottom: $gutter;
+      }
+    }
+  }
+  .col-auto {
+    flex: auto; //2
+    @include responsiveness(600px) {
+      flex-grow: 0;
+    }
+  }
+  @for $i from 1 to 11 {
+    .col-#{$i} {
+      width: $i * 10%; //3
+      @include responsiveness(600px) {
+        width: 100%;
+      }
+    }
+  }
+}

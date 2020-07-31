@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/sass/vendors/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./styles/app.css" />
+
+    <title>css layout</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="#" class="form" autocomplete="off">
+            <section class="form__section form__section--personal-data">
+                <h3 class="heading form__title">datos personales</h3>
+                <div class="flex-row flex-row--gutter">
+                    <div class="col-5">
+                        <div class="form__group">
+                            <label for="user-name" class="text form__label" data-required>nombre</label>
+                            <input type="text" class="input form__input" id="user-name" name="user-name" />
+                        </div>
+                    </div>
+                    <div class="col-5">
+                        <div class="form__group">
+                            <label for="user-lastname" class="text form__label" data-required>apellido</label>
+                            <input type="text" class="input form__input" id="user-lastname" name="user-lastname" />
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-row flex-row--gutter">
+                    <div class="col-5">
+                        <div class="form__group">
+                            <label for="user-gender" class="text form__label" data-required>genero</label>
+                            <div class="select">
+                                <select name="user-gender" id="user-gender" class="select__input form__input">
+                                    <option value="masculino">masculino</option>
+                                    <option value="femenino">femenino</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-5">
+                        <div class="form__group">
+                            <label for="user-identification" class="text form__label" data-required>numero de
+                                documento</label>
+                            <input type="text" class="input form__input" id="user-identification"
+                                name="user-identification" />
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-row flex-row--gutter">
+                    <div class="col-5">
+                        <div class="form__group">
+                            <label for="" class="text form__label" data-required>fecha de nacimiento</label>
+                            <div class="flex-row flex-row--gutter">
+                                <div class="col-auto">
+                                    <div class="select">
+                                        <select name="user-daybirth" id="user-daybirth"
+                                            class="select__input form__input">
+                                            <option value="31">31</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="select">
+                                        <select name="user-monthbirth" id="user-monthbirth"
+                                            class="select__input form__input">
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="select">
+                                        <select name="user-yearbirth" id="user-yearbirth"
+                                            class="select__input form__input">
+                                            <option value="1999">1999</option>
+                                            <option value="2000">2000</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-5">
+                        <div class="form__group">
+                            <label for="user-phone" class="text form__label">celular</label>
+                            <input type="text" class="input form__input" id="user-phone" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="form__section">
+                <h3 class="heading form__title">datos de acceso</h3>
+                <div class="flex-row flex-row--gutter">
+                    <div class="col-5">
+                        <div class="form__group">
+                            <label for="user-email" class="text form__label" data-required>correo electronico</label>
+                            <input type="text" class="input form__input" id="user-email" name="user-email" />
+                        </div>
+                    </div>
+                    <div class="col-5">
+                        <div class="form__group">
+                            <label for="user-reemail" class="text form__label" data-required>confirmacion correo
+                                electronico</label>
+                            <input type="text" class="input form__input" id="user-reemail" name="user-reemail" />
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-row flex-row--gutter">
+                    <div class="col-5">
+                        <div class="form__group">
+                            <label for="user-password" class="text form__label" data-required>contraseña</label>
+                            <input type="password" class="input form__input" id="user-password" name="user-password" />
+                        </div>
+                    </div>
+                    <div class="col-5">
+                        <div class="form__group">
+                            <label for="user-repassword" class="text form__label" data-required>confirmacion
+                                contraseña</label>
+                            <input type="password" class="input form__input" id="user-repassword"
+                                name="user-repassword" />
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-row flex-row--gutter">
+                    <div class="col-5">
+                        <div class="form__group">
+                            <label for="user-scenary" class="text form__label" data-required>teatro favorito</label>
+                            <div class="select">
+                                <select name="user-scenary" id="user-scenary" class="select__input form__input">
+                                    <option value="1">teatro 1</option>
+                                    <option value="2">teatro 2</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-5"></div>
+                </div>
+            </section>
+            <section class="form__section">
+                <h3 class="heading form__title">informacion adicional</h3>
+                <div class="form__group">
+                    <div class="toggle toggle--inline form__input">
+                        <input type="checkbox" name="user-advertisements" id="user-advertisements"
+                            class="toggle__input">
+                    </div>
+                    <label for="user-advertisements" class="text">
+                        ¿Te gustaria recibir informacion de promociones en tu email?
+                    </label>
+                </div>
+            </section>
+            <section class="form__section text-center">
+                <button class="button button--alternative button--inline text text-center">inscribete</button>
+            </section>
+            <p class="text text-center">Al inscribirte asumimos que estas de acuerdo con las <span
+                    class="text text--accent">
+                    politicas de proteccion de los
+                    datos pesonales</span> y <span class="text text--accent">los terminos y condiciones legales</span>
+            </p>
+        </form>
+    </div>
+</body>
+
+</html>

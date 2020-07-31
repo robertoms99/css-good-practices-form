@@ -1,0 +1,42 @@
+/*||FORM COMPONENT||*/
+
+//1-initialize counter "section" at 0
+//2- condense font
+//3- increment "section" counter
+//4- display "section" counter
+.form {
+  counter-reset: section; //1
+  &__section {
+    &:not(:last-child) {
+      margin-bottom: $gutter * 4;
+    }
+  }
+  &__title {
+    margin-bottom: $gutter * 2.5;
+    letter-spacing: -0.05em; //2
+    &::before {
+      counter-increment: section; //3
+      content: '0' counter(section) ''; //4
+      color: $color-accent;
+      display: inline-block;
+      margin-right: $gutter / 2;
+    }
+  }
+  &__label {
+    &[data-required] {
+      &::after {
+        content: ': *';
+        color: $color-accent;
+      }
+    }
+  }
+  &__input {
+    background-color: $color-grey-light;
+    box-shadow: 0 0 3px $color-grey-dark inset;
+    margin-top: $gutter;
+    transition: box-shadow 200ms;
+    &:focus {
+      box-shadow: 0 0 3px $color-accent inset;
+    }
+  }
+}

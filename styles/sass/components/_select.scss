@@ -1,0 +1,24 @@
+/*|| SELECT COMPONENT||*/
+//1- select arrow
+//2- centered vertical
+//3- ignore element click event
+//4- inherited style
+//5- override user agent appearance
+.select {
+  width: 100%;
+  position: relative;
+  &::after {
+    content: '\21D3'; //1
+    display: inline-block;
+    position: absolute;
+    top: calc(50% - 0.5em); //2
+    right: 1em;
+    color: $color-accent;
+    pointer-events: none; //3
+  }
+  &__input {
+    cursor: pointer;
+    @extend %input-resets; //4
+    @extend %remove-appearance; //5
+  }
+}

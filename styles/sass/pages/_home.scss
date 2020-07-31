@@ -1,0 +1,13 @@
+/*||BASE HOME||*/
+
+//1- create a BFC
+.container {
+  display: flow-root; //1
+  min-height: 100vh;
+  background-color: white;
+  margin: 0 10%;
+  padding: 5%;
+  @include responsiveness(600px) {
+    margin: 0 3%;
+  }
+}
