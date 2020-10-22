@@ -16,4 +16,4 @@ this is the design was given to me by my teacher **Emanuel gutierrez**:
 ![design][img1]
 
 [img1]: ./design.png 'Initial design'
-[link]: https://robertal99.github.io/cssgoodpractices/
+[link]: https://robertoms99.github.io/css-good-practices-form/
